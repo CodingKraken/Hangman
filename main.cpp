@@ -15,8 +15,7 @@ int main ()
     //Seeding the random number generator
     srand ((unsigned) time(0));
 
-    //Starting a counter, putting items from words.txt into string vector
-    int counter = 0;
+    //Putting items from words.txt into string vector
     vector<string> wordarr;
     ifstream dict_file("words.txt");
     string line;
