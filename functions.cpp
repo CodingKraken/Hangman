@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//Function for updating the word if the player correctly guesses a letter
 vector<char> check_answer(vector<char> word, vector<char> hiddenword, char answer ) {
     for(int i = 0; i < (word.size() - 1); i++) {
         if(word[i] == answer) {
@@ -15,13 +16,13 @@ vector<char> check_answer(vector<char> word, vector<char> hiddenword, char answe
     return hiddenword;
 }
 
-
-
+//Returning the word vector as a string
 string printword(vector<char> word) {
     string output_word(word.begin(), word.end());
     return output_word;
 }
 
+//Checking if the player has won
 bool has_won(vector<char> word, vector<char> hiddenword) {
     int correcthits = 0;
     for(int i = 0; i < (word.size() - 1); i++) {
@@ -36,6 +37,7 @@ bool has_won(vector<char> word, vector<char> hiddenword) {
     }
 }
 
+//Returns different states of the hangman depending on the attempt number
 string print_hangman(int attempts) {
     string hangman;
     switch(attempts) {
